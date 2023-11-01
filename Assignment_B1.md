@@ -217,17 +217,17 @@ The function work as expect, the data point with NA is TRUE in
 `Services_NA` and FALSE in anywhere else.
 
 ``` r
-tidy_column_with_delimiter_seperated_values(example_2, ";", Services)
+tidy_column_with_delimiter_seperated_values(example_2, ",", Services)
 ```
 
-    ## # A tibble: 4 × 5
-    ##      ID `Services_Cleaning,Laundry` `Services_Room Service,Pool` Services_NA
-    ##   <int> <lgl>                       <lgl>                        <lgl>      
-    ## 1     1 TRUE                        FALSE                        FALSE      
-    ## 2     2 FALSE                       TRUE                         FALSE      
-    ## 3     3 FALSE                       FALSE                        TRUE       
-    ## 4     4 FALSE                       FALSE                        FALSE      
-    ## # ℹ 1 more variable: `Services_Gym,Spa` <lgl>
+    ## # A tibble: 4 × 8
+    ##      ID Services_Cleaning Services_Laundry `Services_Room Service` Services_Pool
+    ##   <int> <lgl>             <lgl>            <lgl>                   <lgl>        
+    ## 1     1 TRUE              TRUE             FALSE                   FALSE        
+    ## 2     2 FALSE             FALSE            TRUE                    TRUE         
+    ## 3     3 FALSE             FALSE            FALSE                   FALSE        
+    ## 4     4 FALSE             FALSE            FALSE                   FALSE        
+    ## # ℹ 3 more variables: Services_NA <lgl>, Services_Gym <lgl>, Services_Spa <lgl>
 
 ## Exercise 4: Test the Function (25 points)
 
@@ -257,4 +257,4 @@ test_that("Testing tidy_column_with_delimiter_seperated_values function", {
 })
 ```
 
-    ## Test passed 🎊
+    ## Test passed 😸

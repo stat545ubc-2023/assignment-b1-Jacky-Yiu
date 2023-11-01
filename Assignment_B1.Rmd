@@ -133,7 +133,7 @@ example_2
 The function work as expect, the data point with NA is TRUE in `Services_NA` and FALSE in anywhere else.
 
 ```{r}
-tidy_column_with_delimiter_seperated_values(example_2, ";", Services)
+tidy_column_with_delimiter_seperated_values(example_2, ",", Services)
 ```
 
 ## Exercise 4: Test the Function (25 points)
